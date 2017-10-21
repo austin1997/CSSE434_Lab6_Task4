@@ -27,7 +27,7 @@ Partitioned by (year int, month int, day int, hour int)
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 STORED AS orc;
 
-insert into table logData partition(year='${hiveconf:year}', month='${hiveconf:month}', day='${hiveconf:day}', hour='${hiveconf:hour}') select name,hitRate, errorRate from archiveLogData where year='${hiveconf:year}', month='${hiveconf:month}', day='${hiveconf:day}', hour='${hiveconf:hour}';
+insert into table logData partition(year=${hiveconf:year}, month=${hiveconf:month}, day=${hiveconf:day}, hour=${hiveconf:hour}) select name,hitRate, errorRate from archiveLogData where year=${hiveconf:year}, month=${hiveconf:month}, day=${hiveconf:day}, hour=${hiveconf:hour};
 
 select COUNT(*) from archiveLogData;
 select COUNT(*) from logData;
