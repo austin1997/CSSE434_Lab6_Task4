@@ -1,0 +1,1 @@
+hive --hiveconf databaseName=logAnalysiszhaiz --hiveconf pigOutputDir=/tmp/output --hiveconf jobDate=2017-10-17 --hiveconf year=2017 --hiveconf month=10 --hiveconf day=17 --hiveconf hour=21 -f *.hql

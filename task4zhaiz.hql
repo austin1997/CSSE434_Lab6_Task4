@@ -2,6 +2,7 @@ create database IF NOT EXISTS ${hiveconf:databaseName};
 
 use ${hiveconf:databaseName};
 
+
 Create TABLE IF NOT EXISTS archiveLogData
 (
 name string,
