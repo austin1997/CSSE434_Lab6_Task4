@@ -1,0 +1,3 @@
+CSSE333,Intro To Databases
+CSSE371,Requirements Engineering
+CSSE490,Introduction to Hadoop
